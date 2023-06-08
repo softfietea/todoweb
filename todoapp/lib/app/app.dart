@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todoapp/features/home/screens/home_screen.dart';
+import 'package:todoapp/app/shared/app_theme.dart';
+import 'package:todoapp/features/onboarding/screens/onboarding_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -7,11 +8,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomeScreen(),
+      theme: AppTheme().appThemeDark,
+      home: const OnboardingScreen(),
     );
   }
 }
